@@ -9,5 +9,7 @@ public class StacksQueues {
         list.push(30);
         list.push(56);
         list.showList();
+     //   list.peek();
+        list.pop();
     }
 }

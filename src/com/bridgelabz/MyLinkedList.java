@@ -27,7 +27,33 @@ public class MyLinkedList {
                 temp = temp.next;
             }
         }
+        System.out.println("");
     }
 
+    void peek() {
+        if (head == null) {
+            System.out.println("Stack is Empty.");
+        } else {
+            System.out.println("");
+            System.out.println("Topmost value is: " + head.data);
+        }
+    }
 
+    public void pop() {
+        INode preNode = null;
+        while (head != null) {
+            head = head.next;
+
+            if (head != null) {
+                System.out.print(head.data + "->");
+                preNode = head;
+            } else {
+                System.out.println("");
+                System.out.println(preNode.data + "->");
+                System.out.println("Stack is empty");
+                break;
+            }
+        }
+    }
 }
+

@@ -35,7 +35,7 @@ public class MyLinkedList {
             System.out.println("Stack is Empty.");
         } else {
             System.out.println("");
-            System.out.println("Topmost value is: " + head.data);
+            System.out.println("Peek is: " + head.data);
         }
     }
 
@@ -55,5 +55,31 @@ public class MyLinkedList {
             }
         }
     }
-}
+
+    public void queue(int data) {
+        INode newNode = new INode(data);
+
+        if (head == null) {
+            //   System.out.println("Linked list is Empty");
+            head = newNode;
+            tail = newNode;
+        } else {
+            newNode.next = head;
+            head = newNode;
+        }
+    }
+
+    public void dequeue() {
+        INode temp = head;
+            while (temp != null) {
+                if (temp.next == null) {
+                    temp = null;
+                } else {
+                    System.out.print(temp.data + "->");
+                    temp = temp.next;
+                }
+            }
+        }
+    }
+
 

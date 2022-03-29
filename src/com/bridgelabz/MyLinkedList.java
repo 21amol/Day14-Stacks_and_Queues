@@ -60,7 +60,7 @@ public class MyLinkedList {
         INode newNode = new INode(data);
 
         if (head == null) {
-            //   System.out.println("Linked list is Empty");
+            // System.out.println("Linked list is Empty");
             head = newNode;
             tail = newNode;
         } else {
